@@ -10,6 +10,10 @@ Numpy, Scipy, and Matplotlib.
 
 myportfolio3_Rewrite.m and myportfolio3.py have code to calculate and display the additional graph showing the payoff for the 1994 data.
 
+### Change Notes
+
+File corrections have been made to reflect problems found in Thursday's (3/9) lecture.
+
 ---
 
 For any questions, comments, concerns, issues, etc. please see the discussions tab.
