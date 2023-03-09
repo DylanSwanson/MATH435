@@ -37,14 +37,13 @@ en = ones(1,n);
 % Since mu_vector is a row vector, the 2 selects the number of columns.
 % In this case, it is equivalent to the number of elements.
 for i = 1:size(mu_vector,2)
-    i;
     
     % Select specific mu for easier use later.
     mu = mu_vector(i);
 
     % Calculate c_1 based on what was shown in lecture.
     % Note c_1 is a column vector to align more properly with lecture.
-    c_1 = [mu * f' / n];
+    c_1 = [mu * f'];
 
     % Calculate c_2 based on what was shown in lecture.
     % Note c_2 is a column vector to align more properly with lecture.
@@ -120,8 +119,8 @@ ylabel('risk')
 % Plots the decision vectors with repsect to the mu value. Figure 2.
 figure
 v=mu_vector
-plot(v,XX(1,:)',v,XX(2,:)',v,XX(3,:)',v,XX(4,:)',v,XX(5,:)',v,XX(6,:)',v,XX(7,:)',v,XX(8,:)','--y',v,XX(9,:)','-.')
-legend('Bonds', 'Materials','Energy','Financial','Industrial','Technology','Staples','Utilities','Health')
+plot(v,XX(1,:)',v,XX(2,:)',v,XX(3,:)',v,XX(4,:)',v,XX(5,:)',v,XX(6,:)',v,XX(7,:)',v,XX(8,:)','--y')
+legend('Bonds', 'Materials','Energy','Financial','Industrial','Technology','Staples','Utilities')
 xlabel('risk parameter')
 ylabel('Strategy')
 

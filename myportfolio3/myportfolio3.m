@@ -28,7 +28,7 @@ en = ones(1,n);
 for i = 1:size(muv,2)
     i
 
-    c = [muv(i)*f/n em*(-1/m)]
+    c = [muv(i)*f em*(-1/m)]
 
     S = repmat(f,m,1);
 
@@ -49,12 +49,12 @@ end
 
 figure
 plot(reward,risk,'--o')
-xlabel('risk')
-ylabel('reward')
+xlabel('reward')
+ylabel('risk')
 figure
 v=muv
-plot(v,XX(1,:)',v,XX(2,:)',v,XX(3,:)',v,XX(4,:)',v,XX(5,:)',v,XX(6,:)',v,XX(7,:)',v,XX(8,:)','--y',v,XX(9,:)','-.')
-legend('Bonds', 'Materials','Energy','Financial','Industrial','Technology','Staples','Utilities','Health')
+plot(v,XX(1,:)',v,XX(2,:)',v,XX(3,:)',v,XX(4,:)',v,XX(5,:)',v,XX(6,:)',v,XX(7,:)',v,XX(8,:)','--y')
+legend('Bonds', 'Materials','Energy','Financial','Industrial','Technology','Staples','Utilities')
 xlabel('risk parameter')
 ylabel('Strategy')
 %legend('Bonds', 'Materials','Energy','Financial','Industrial','Technology','Staples','Utilities','Health')

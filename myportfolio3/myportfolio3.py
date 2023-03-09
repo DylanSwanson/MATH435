@@ -50,7 +50,7 @@ for i, mu in enumerate(mu_vector) :
 
     # Calculate c_1 based on what was shown in lecture.
     # Note c_1 is a column vector to align more properly with lecture.
-    c_1 = np.reshape((mu * f / n), (n, 1))
+    c_1 = np.reshape((mu * f), (n, 1))
 
     # Calculate c_2 based on what was shown in lecture.
     # Note c_2 is a column vector to align more properly with lecture.
@@ -128,18 +128,16 @@ plt.plot(reward, risk, '--o')
 plt.xlabel('reward')
 plt.ylabel('risk')
 plt.title('Figure 1')
-#fig1.show()
 
 # Plots the decision vectors with repsect to the mu value. Figure 2.
 fig2 = plt.figure(2, figsize=(plotSize, plotSize))
-labels = ['Bonds', 'Materials','Energy','Financial','Industrial','Technology','Staples','Utilities','Health']
-for i in range(9) :
-    plt.plot(mu_vector, XX[i, :], label=labels[i])
+labels = ['Bonds', 'Materials','Energy','Financial','Industrial','Technology','Staples','Utilities']
+for i, label in enumerate(labels) :
+    plt.plot(mu_vector, XX[i, :], label=label)
 plt.xlabel('risk parameter')
 plt.ylabel('Strategy')
 plt.title('Figure 2')
 plt.legend()
-#fig2.show()
 
 # Plots the payoff versus mu graph. Figure 3.
 fig3 = plt.figure(3, figsize=(plotSize, plotSize))
